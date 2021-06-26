@@ -1,7 +1,7 @@
 @import "reset";
 @import "typography";
 
-$primary-color: blue;
+$primary-color: darkslateblue;
 $body-font: "Avara_Bold";
 $body-size: 24px;
 $heading-font: "Avara_Black";
@@ -27,14 +27,11 @@ body {
     font-family: $body-font;
     font-size: $body-size;
     line-height: 1.5; 
-
+    text-align: center;
     height: 100vh;
     @include vertically-middle();
 }
 
-h1 {
-    font-family: $heading-font;
-}
 
 section {
     width: 500px;
@@ -43,7 +40,18 @@ section {
         width: 350px;
         font-size: 16px;
     }
+   
+    h1 {
+        font-size: 2rem;
+        margin: 0 0 .5rem 0;
+    }
+    
+    span {
+        color: yellow;
+    }
+
     p {
-        margin: 24px 0 0 0;
+        font-family: "Avara_Bold Italic";
+        margin: 1rem 0 0 0;
     }
 }

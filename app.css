@@ -89,20 +89,17 @@ body {
 
 */
 body {
-  background-color: blue;
+  background-color: darkslateblue;
   color: white;
   font-family: "Avara_Bold";
   font-size: 24px;
   line-height: 1.5;
+  text-align: center;
   height: 100vh;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-}
-
-h1 {
-  font-family: "Avara_Black";
 }
 
 section {
@@ -114,8 +111,16 @@ section {
     font-size: 16px;
   }
 }
+section h1 {
+  font-size: 2rem;
+  margin: 0 0 0.5rem 0;
+}
+section span {
+  color: yellow;
+}
 section p {
-  margin: 24px 0 0 0;
+  font-family: "Avara_Bold Italic";
+  margin: 1rem 0 0 0;
 }
 
 /*# sourceMappingURL=app.css.map */
