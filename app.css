@@ -118,6 +118,9 @@ section h1 {
 section span {
   color: yellow;
 }
+section a:hover {
+  filter: drop-shadow(0 0 2.5rem yellow);
+}
 section p {
   font-family: "Avara_Bold Italic";
   margin: 1rem 0 0 0;
