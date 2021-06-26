@@ -1,9 +1,10 @@
 @import "reset";
 @import "typography";
 
-$primary-color: purple;
+$primary-color: blue;
 $body-font: "Avara_Bold";
 $body-size: 24px;
+$heading-font: "Avara_Black";
 $mq-large: 800px;
 $mq-medium: 600px;
 
@@ -29,6 +30,10 @@ body {
 
     height: 100vh;
     @include vertically-middle();
+}
+
+h1 {
+    font-family: $heading-font;
 }
 
 section {

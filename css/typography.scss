@@ -7,6 +7,12 @@
     font-weight: normal;
     font-style: normal;*/
 }
+
+@font-face {
+    font-family: "Avara_Black";
+    src:    url(fonts/Black/Avara-Black.woff2) format('woff2'),
+            url(fonts/Black/Avara-Black.woff) format('woff')
+}
 /*
 @font-face {
     font-family: 'Avara_Bold Italic';
