@@ -1,0 +1,34 @@
+{
+  "name": "anna-karenina",
+  "version": "1.0.0",
+  "description": "anna karenina website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moa-mnsr/anna-karenina.git"
+  },
+  "keywords": [
+    "book"
+  ],
+  "author": "M Mansour",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moa-mnsr/anna-karenina/issues"
+  },
+  "homepage": "https://github.com/moa-mnsr/anna-karenina#readme",
+  "devDependencies": {
+    "browser-sync": "^2.27.3",
+    "clean-css": "^4.2.3",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^5.0.0",
+    "sass": "^1.35.1"
+  },
+  "dependencies": {
+    "gulp-sourcemaps": "^3.0.0"
+  }
+}
