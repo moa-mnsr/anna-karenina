@@ -20,6 +20,15 @@
   },
   "homepage": "https://github.com/moa-mnsr/anna-karenina#readme",
   "devDependencies": {
-    "gulp": "^4.0.2"
+    "browser-sync": "^2.27.3",
+    "clean-css": "^4.2.3",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^5.0.0",
+    "sass": "^1.35.1"
+  },
+  "dependencies": {
+    "gulp-sourcemaps": "^3.0.0"
   }
 }
