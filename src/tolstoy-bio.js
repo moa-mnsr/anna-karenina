@@ -4,15 +4,15 @@ let pageNumber = 0
 // hold the content for these  pages 
 
 const pages = [
-    { text: "Elder, Apostate, and Tsar", background: "pink", color: "white" },
-    { text: "Dropout", background: "green", color: "white" },
-    { text: "Landowner, Gambler, Officer, Writer", background: "red", color: "white" },
-    { text: "Literary Duellist and Repentant Nobleman", background: "purple", color: "white" },
-    { text: "Husband, Beekeeper, and Epic Poet", background: "yellow", color: "white" },
-    { text: "Student, Teacher, Father", background: "blue", color: "white" },
-    { text: "Novelist", background: "coral", color: "white" },
-    { text: "Pilgrim, Nihilist, Muzhik", background: "orange", color: "white" },
-    { text: "Sectarian, Anarchist, Holy Fool", background: "grey", color: "white" },
+    { font: "Avara_Bold Italic", text: "Elder, Apostate, Tsar", background: "pink", color: "white" },
+    { font: "Avara_Bold Italic", text: "Dropout", background: "green", color: "white" },
+    { font: "Avara_Bold Italic", text: "Landowner, Gambler, Officer, Writer", background: "red", color: "white" },
+    { font: "Avara_Bold Italic", text: "Literary Duellist, Repentant Nobleman", background: "purple", color: "white" },
+    { font: "Avara_Bold Italic", text: "Husband, Beekeeper, Epic Poet", background: "yellow", color: "white" },
+    { font: "Avara_Bold Italic", text: "Student, Teacher, Father", background: "blue", color: "white" },
+    { font: "Avara_Bold Italic", text: "Novelist", background: "coral", color: "white" },
+    { font: "Avara_Bold Italic", text: "Pilgrim, Nihilist, Muzhik", background: "orange", color: "white" },
+    { font: "Avara_Bold Italic", text: "Sectarian, Anarchist, Holy Fool", background: "teal", color: "white" },
    
 ]
 
@@ -20,7 +20,7 @@ const pages = [
 
 const nextTag = document.querySelector("div.arrows svg.next")
 const previousTag = document.querySelector("div.arrows svg.prev")
-const outputTag = document.querySelector("section p")
+const outputTag = document.querySelector("main h2")
 const randomTag = document.querySelector("div.arrows svg.random")
 const bodyTag = document.querySelector("body")
 
@@ -58,6 +58,7 @@ const random = function () {
 const updatePage = function () {
     outputTag.innerHTML = pages[pageNumber].text
     bodyTag.style.backgroundColor = pages[pageNumber].background
+    outputTag.style.fontFamily = "Avara_Bold Italic"
     outputTag.style.color = "black"
 }
 

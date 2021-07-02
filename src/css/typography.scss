@@ -18,3 +18,24 @@
     font-weight: normal;
     font-style: italic;
 }
+
+@font-face {
+    font-family: "Happy Times";
+    src: url(fonts/happy-times-NG_regular_master_web.woff2), url(fonts/happy-times-NG_regular_master_web.woff);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Happy Times";
+    src: url(fonts/happy-times-NG_italic_master_web.woff2), url(fonts/happy-times-NG_italic_master_web.woff);
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Happy Times";
+    src: url(fonts/happy-times-NG_bold_master_web.woff2), url(fonts/happy-times-NG_bold_master_web.woff);
+    font-weight: normal;
+    font-style: bold;
+}

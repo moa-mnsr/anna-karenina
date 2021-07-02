@@ -1,10 +1,15 @@
 @import "reset";
 @import "typography";
 
-$primary-color: darkslateblue;
-$body-font: "Avara_Bold";
+@keyframes fade {
+    0% {opacity: 0;}
+    100% { opacity: 1;}
+}
+
+$primary-color: gainsboro;
+$body-font: "Happy Times";
 $body-size: 24px;
-$heading-font: "Avara_Black";
+$heading-font: "Happy Times";
 $mq-large: 800px;
 $mq-medium: 600px;
 
@@ -17,48 +22,95 @@ $mq-medium: 600px;
 
 body {
     background-color: $primary-color;
-    color: white;
+    color: black;
     font-family: $body-font;
     font-size: $body-size;
     line-height: 1.5; 
     height: 100vh;
-}
 
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 30rem;
-    height: 100vh;
-    background-color: teal;
-    color: white;
-
-    font-size: 2rem;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    a {
+    nav {
+        position: fixed;
+        top: 0;
+        left: -100vw;
+        width: 100vw;
+        height: 100vh;
+        background-color: darkslateblue;
         color: white;
-        text-decoration: none;
-        margin: 1rem 3rem;
+    
+        font-size: 2rem;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    
+        transition: left 0.5s;
+        z-index: 2;
+    
+        
+        &.open {
+            left: 0;
+        }
+    
+    
+        a {
+            color: white;
+            text-decoration: none;
+            margin: 5px 32px;
+        }
+    }
+    
+    div.menu-options {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 2;
+    }
+
+    main {
+        z-index: 1;
+        transition: transform 0.5s;
+        
+        &.open {
+            transform: translate(100vw, 0)
+        }
     }
 }
 
 
+
+
+
+
 #index { 
         main {
-            position: relative;
-            z-index: 1;
-            background-color: gainsboro;
             min-height: 100vh;
-            transition: transform 0.5s;
-            color: darksalmon;
+            position: relative;
 
-                &.open {
-                    transform: translate(30rem, 0)
+            section {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+
+                div.slides {
+                    width: 350px;
+                    position: relative;
+                    
+                    img {
+                        height: 475px;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+        
+                        &:first-child {
+                            z-index: 1;
+                        } 
+                    }
                 }
+                div.content {
+                    visibility: collapse;
+                }
+            }
         }
 }
 
@@ -67,37 +119,35 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 
-        section {
-            text-align: center;
+    header {
 
-            @include mq($mq-medium) {
-                width: 350px;
-                font-size: 16px;
-            }
-        
-            h1 {
-                font-size: 2rem;
-                margin: 0 0 .5rem 0;
-            }
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-            span {
-                color: yellow;
-            }
-
-            a:hover {
-                filter: drop-shadow(0 0  2.5rem yellow);
-            }
-
-            p {
-                font-family: "Avara_Bold Italic";
-                margin: 1rem 0 0 0;
-            }
-
-
+        h1 {
+            font-size: 2rem;
+            margin: 0 0 .5rem 0;
         }
+    }
 
-        footer {
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        text-align: center;
+
+        h2 {
+            font-size: 6rem;
+            font-style: italic;
+        }
+    }
+
+
+    footer {
             position: fixed;
             bottom: 2rem;
             left: 0;
