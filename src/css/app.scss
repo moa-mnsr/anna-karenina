@@ -93,14 +93,20 @@ body {
                 flex-direction: column;
 
                 div.slides {
+                    margin-top: 100px;
                     width: 350px;
                     position: relative;
+
+                    &:hover img {
+                        box-shadow: 0 0 10px rgba(0, 0, 0, .1)
+                    }
                     
                     img {
                         height: 475px;
                         position: absolute;
                         top: 0;
                         left: 0;
+                        transition: transform 0.5s, box-shadow .5s;
         
                         &:first-child {
                             z-index: 1;
