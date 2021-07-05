@@ -1,14 +1,41 @@
 @font-face {
     font-family: "Avara_Bold";
-    src: url(/fonts/Avara-Bold.woff2), url(/fonts/Avara-Bold.woff);
+    src: url(fonts/Avara-Bold.woff2), url(fonts/Avara-Bold.woff);
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
     font-family: "Avara_Black";
-    src: url(/fonts/Avara-Black.woff2), url(/fonts/Avara-Black.woff);
+    src: url(fonts/Avara-Black.woff2), url(fonts/Avara-Black.woff);
+    font-weight: bold;
+    font-style: normal;
 }
 
 @font-face {
     font-family: "Avara_Bold Italic";
-    src: url(/fonts/Avara-BoldItalic.woff2), url(/fonts/Avara-BoldItalic.woff2);
+    src: url(fonts/Avara-BoldItalic.woff2), url(fonts/Avara-BoldItalic.woff2);
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Happy Times";
+    src: url(fonts/happy-times-NG_regular_master_web.woff2), url(fonts/happy-times-NG_regular_master_web.woff);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Happy Times";
+    src: url(fonts/happy-times-NG_italic_master_web.woff2), url(fonts/happy-times-NG_italic_master_web.woff);
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Happy Times";
+    src: url(fonts/happy-times-NG_bold_master_web.woff2), url(fonts/happy-times-NG_bold_master_web.woff);
+    font-weight: bold;
+    font-style: normal;
 }

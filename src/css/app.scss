@@ -1,10 +1,16 @@
 @import "reset";
 @import "typography";
 
-$primary-color: darkslateblue;
-$body-font: "Avara_Bold";
+@keyframes fade {
+    0% {opacity: 0;}
+    100% { opacity: 1;}
+}
+
+
+$primary-color: gainsboro;
+$body-font: "Happy Times";
 $body-size: 24px;
-$heading-font: "Avara_Black";
+$heading-font: "Happy Times";
 $mq-large: 800px;
 $mq-medium: 600px;
 
@@ -14,48 +20,179 @@ $mq-medium: 600px;
     }
 }
 
-@mixin vertically-middle () {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
 
 body {
     background-color: $primary-color;
-    color: white;
+    color: black;
     font-family: $body-font;
     font-size: $body-size;
     line-height: 1.5; 
-    text-align: center;
     height: 100vh;
-    @include vertically-middle();
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: -100vw;
+        width: 100vw;
+        height: 100vh;
+        background-color: darkslateblue;
+        color: white;
+    
+        font-size: 2rem;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    
+        transition: left 0.5s;
+        z-index: 2;
+    
+        
+        &.open {
+            left: 0;
+        }
+    
+    
+        a {
+            color: white;
+            text-decoration: none;
+            margin: 5px 32px;
+        }
+    }
+    
+    div.menu-options {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 2;
+    }
+
+    main {
+        z-index: 1;
+        transition: transform 0.5s;
+        
+        &.open {
+            transform: translate(100vw, 0)
+        }
+    }
 }
 
 
-section {
-    width: 500px;
 
-    @include mq($mq-medium) {
-        width: 350px;
-        font-size: 16px;
-    }
-   
-    h1 {
-        font-size: 2rem;
-        margin: 0 0 .5rem 0;
-    }
+
+
+
+#index { 
+        main {
+            min-height: 100vh;
+            position: relative;
+
+            section {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+
+                div.slides {
+                    width: 30rem;
+                    position: fixed;
+
+                    &:hover img {
+                        box-shadow: 0 0 10px rgba(0, 0, 0, .1)
+                    }
+                    
+                    img {
+                        cursor: pointer;
+                        height: 30rem;
+                        position: absolute;
+                        top: 5rem;
+                        right: .1rem;
+                        transition: transform 0.5s, box-shadow .5s;
+
+                        &:first-child {
+                            z-index: 1;
+                        } 
+                    }
+                }
+
+                div.content {
+                    position: fixed;
+                    left: 3rem;
+                    bottom: 1rem;
+                    font-size: 10rem;
+                    font-family: Avara_Bold Italic;
+                }
+
+        
+
+                    
+                }
+            }
+        }
     
-    span {
-        color: yellow;
+
+
+
+
+
+#tolstoy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    header {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            font-size: 2rem;
+            margin: 0 0 .5rem 0;
+        }
     }
 
-    a:hover {
-        filter: drop-shadow(0 0  2.5rem yellow);
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        text-align: center;
+
+        h2 {
+            font-size: 6rem;
+            font-style: italic;
+        }
     }
-    
-    p {
-        font-family: "Avara_Bold Italic";
-        margin: 1rem 0 0 0;
-    }
+
+
+    footer {
+            position: fixed;
+            bottom: 2rem;
+            left: 0;
+            width: 100%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            div.arrows {
+                user-select: none; /* supported by Chrome and Opera */
+            -webkit-user-select: none; /* Safari */
+            -khtml-user-select: none; /* Konqueror HTML */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+
+                    svg {
+                        color: black;
+                        margin: 0 .2rem;
+                    
+                        &:hover {
+                            color: white;
+                            cursor: pointer;
+                        }
+                    }
+            }  
+        }
 }

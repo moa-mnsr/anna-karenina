@@ -42,6 +42,11 @@ gulp.task("images", function() {
   .pipe(gulp.dest("dist/img"))
 })
 
+gulp.task("js", function () {
+  return gulp.src("src/*.js")
+  .pipe(gulp.dest("dist"))
+})
+
 gulp.task("watch", function () {
   
   browserSync.init({
@@ -56,10 +61,11 @@ gulp.task("watch", function () {
   gulp.watch("src/css/app.scss", ["sass"])
   gulp.watch("src/fonts/*", ["fonts"])
   gulp.watch("src/img/*", ["images"])
+  gulp.watch("src/*.js", ["js"])
 })
 
 gulp.task("deploy", function () {
   ghpages.publish("dist")
 })
 
-gulp.task('default', ["html", "sass", "fonts", "images", "watch"])
+gulp.task('default', ["html", "sass", "fonts", "images", "js", "watch"])
