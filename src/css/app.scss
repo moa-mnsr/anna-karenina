@@ -6,6 +6,7 @@
     100% { opacity: 1;}
 }
 
+
 $primary-color: gainsboro;
 $body-font: "Happy Times";
 $body-size: 24px;
@@ -93,32 +94,45 @@ body {
                 flex-direction: column;
 
                 div.slides {
-                    margin-top: 100px;
-                    width: 350px;
-                    position: relative;
+                    width: 30rem;
+                    position: fixed;
 
                     &:hover img {
                         box-shadow: 0 0 10px rgba(0, 0, 0, .1)
                     }
                     
                     img {
-                        height: 475px;
+                        cursor: pointer;
+                        height: 30rem;
                         position: absolute;
-                        top: 0;
-                        left: 0;
+                        top: 5rem;
+                        right: .1rem;
                         transition: transform 0.5s, box-shadow .5s;
-        
+
                         &:first-child {
                             z-index: 1;
                         } 
                     }
                 }
+
                 div.content {
-                    visibility: collapse;
+                    position: fixed;
+                    left: 3rem;
+                    bottom: 1rem;
+                    font-size: 10rem;
+                    font-family: Avara_Bold Italic;
+                }
+
+        
+
+                    
                 }
             }
         }
-}
+    
+
+
+
 
 
 #tolstoy {
